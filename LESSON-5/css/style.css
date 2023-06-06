@@ -1,0 +1,50 @@
+/* When using Developer Tools, hovering over the html will highlight those elements on the page.
+
+    Yellow --> Margin
+    Green --> Padding
+    Blue --> Content
+
+*/
+
+/*
+    The following CSS Rule with the Universal Selector should be present in any CSS file.
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures that margins and paddings are included when heights/widths are set.
+                                If, content-box is set here, only the inner content will be considered. */
+}
+
+
+.container{
+    border: dashed red 2px;
+    outline: 4px outset yellow; /* This goes outside the border. */
+    font-size: 1.5rem;
+    padding: 0.5em;
+    
+    /*
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    margin-bottom: 2rem;
+    margin-left: 2.5rem;
+    */
+
+    margin: 1rem 1.5rem 2rem 2.5rem;    /* Shorthand same as the commented code above. TOP RIGHT BOTTOM LEFT */
+}
+
+
+#circle{
+    background: goldenrod;
+    border: 2px solid red;
+    outline: darkblue 2px solid;
+    outline-offset: 0.5rem; /* Distance between outline and border. */
+
+    margin: 1rem auto; /* Shorthand: TOP-BOTTOM LEFT-RIGHT. auto centres it horizontally :) */
+    height: 100px;
+    width: 100px;
+
+    border-radius: 50px;    /* This is what makes the circle. Should be half of the height and width. */
+}
+

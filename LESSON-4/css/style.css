@@ -1,0 +1,45 @@
+header{
+    width: 50%;
+}
+
+h1{ /* Has header as its parent element */
+    border: solid red 2px;    /* px is an absolute unit of measurement and should be avoided if possible. */
+    width: 50%;    /* % is a relative unit of measurement and is based on the parent element's property. */
+}
+/* Note that border was a shorthand here. */
+
+
+p{
+    font-size: 2rem;    /* 1rem = Size of the Root Element. This is also a relative unit. */
+}
+/* Note that the "Root Element" and its properties are defined by the browser. */
+
+
+
+.secondParagraph{
+    font-size: 1.5rem;
+    padding: 2em;   /* em is also a relative unit. 1em = font size of the current element. So, 2em = 2*1.5 = 3rem here. */
+}   /* em is generally used for margin and padding. */
+
+
+/* Relative Units should be preferred over Absolute Units */
+
+
+#thirdParagraph{
+    width: 50ch;    /* ch specifies the maximum number of characters per line. */
+                    /* If the limit is exceeded, that word is pushed to the next line. */
+    font-size: 1rem;
+}
+
+
+
+body > *{
+    width: 50vw; /* Viewport Width, or vw is a Relative Unit. 1vw = 1% of screen width. */
+    height: 75vh;   /* Viewport Height, or vh is a Relative Unit. 1vh = 1% of screen height. */
+    background: papayawhip;
+}
+
+
+/* 100vw for the body tag can lead to horizontal scrollbar in case the vertical scrollbar shows up. 
+    This is because, width of the vertical scrollbar is extra. Using % recommended!  */
+

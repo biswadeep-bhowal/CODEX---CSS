@@ -1,0 +1,57 @@
+*{  /* This is the Universal Selector. It selects everything! */
+    font-family: monospace;
+}
+
+
+
+body{   /* This is an Element Selector. It is used to select all the elements with the same tag. */
+    font-size: 22px;
+}
+
+
+
+.yellowParagraph{   /* This is a Class Selector. It selects all the elements with the same class.*/
+    color: yellow;
+}
+
+.yellowParagraph{
+    color: goldenrod;   /* This color gets implemented because the interpreter read this after the previous class.*/
+}
+
+
+
+.greyParagraph{
+    color: grey;
+}
+
+
+
+#thirdParagraph{ /* This is an ID Selector. IDs are unique, so this selector can select only one element in the entire page */
+    font-style: italic;
+}
+
+/* It is not a good practice to use IDs in CSS. Typically Classes should be preferred over IDs. 
+    Even Element Selectors should be preferred over ID Selectors! */
+
+
+h1, h2{ /* This is a Group Selector */
+    color: violet;
+}
+
+
+
+p span{ /* This is the Descendant Selector. It is simply a space between two selectors.
+            All span tags nested inside all the p tags are selected here. */
+    text-transform: uppercase;
+    background-color: goldenrod;
+    color: darkslateblue;
+}
+
+
+/* In terms of Specificity, ID > Class > Element */
+
+
+.yellowParagraph > span{  /* This is the Child Selector. Here, all the direct children spans for this class is selected */
+    background-color: red !important;   /* This overrides the inherited CSS! */
+    color: white;
+}
