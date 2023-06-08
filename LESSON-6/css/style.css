@@ -1,0 +1,53 @@
+/*
+    Typography is how text is arranged and presented.
+    Text and Font are different things.
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');   /* importing Google Font to CSS File. */
+
+
+
+body{
+    padding: 10%;
+    font-size: 2rem;    /* Generally works out to 32px as browser font sizes are often set to 16px. */
+    color: goldenrod;
+}
+
+
+
+input, button{  /* Group Selector used here ;) */
+    font: inherit;  /* Inherits the font-size set in the body. Otherwise they do not inherit parent properties generally. */
+}
+
+
+
+p{
+    /* Some Text Properties. */
+    
+    text-align: justify;    /* right, left, center also possible. */
+    text-indent: 2em;       /* Begins the first line with the mentioned indent, 2em in our case. */
+
+    line-height: 1.4em;     /* Height of every line. */
+    letter-spacing: 0.1em;  /* Spacing between every letter. */
+    word-spacing: 0.5em;    /* Spacing between every word. */
+
+    /* Some Font Properties. */
+
+    font-weight: 600;   /* Controls the boldness of the font. 300-400 is the default. No Units here! */
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace; /*  Here, we have multuple font families to provide alternatives if any 
+                                                        of these fonts is unavailable. Courier New has quotes because there 
+                                                        is a space in between. It is not necessary provide multiple 
+                                                        font family choices. Put the desired font at the front! */
+}
+
+
+
+p > span{
+    text-decoration: line-through;  /* Strike-Through */
+    text-transform: capitalize;     /* Capitalises the first letter of every word. */
+
+    font-family: Poppins !important;
+}
+
