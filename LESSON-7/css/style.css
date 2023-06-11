@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+
+body{
+    padding: 10%;
+    font-size: 2rem;
+    font-family: 'Poppins', monospace;
+}
+
+
+
+a{
+    text-decoration: none;  /* Removes the default underline from the link text. */
+}
+
+
+
+#firstLink{
+    cursor: not-allowed;    /* Restrictive Icon will appear instead of pointing finger. 
+                                Clicking still navigates to that link! */
+    color: goldenrod;
+}
+
+
+
+a:visited{  /* This is a Pseudo Class. It indicates the State of an element. 
+                In this case, it is an anchor tag that has state set to visited, i.e., a visited link! */
+
+    color: darkblue;
+}
+
+
+
+a:hover{    /* Pseudo Class that indicates an <a> tag over which the mouse pointer is hovered. */
+    color: dodgerblue;
+}
+
+
+
+a:active{   /* Psudo Class gthat indicates an <a> tag that is being clicked. */
+    color: red;
+}
+
+
+/* Note: These pseudo-classes should be written in the above order for them to work properly! */
+/* Note: :visited, :hover and :active have the same Specificity. */
+
+
+#thirdLink:hover, #thirdLink:focus{ /* Recommended to use with :hover for Screen Readers! */
+    opacity: 0.7;
+    background: saddlebrown;
+    color: black;
+}
+
