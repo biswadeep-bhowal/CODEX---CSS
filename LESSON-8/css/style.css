@@ -8,3 +8,61 @@ body{
 }
 
 
+
+ol{
+    list-style-type: lower-alpha;   /* Ordering is done by Lowercase Alphabets. Bullet Styles as seen in MS Word are available. Reversed Numbering also possible. */
+    padding: 0;                     /* By Default, Lists are indented. */
+}
+
+
+
+ul{
+    list-style-type: square;
+
+    text-align: center;
+    list-style-position: inside;    /* By Default this is set to outside in Chrome. So centering the text without this would leave the bullets to the left. 
+                                        Some browsers may handle differently. */
+
+    color: goldenrod;
+    list-style-image: url( '../images/icon.png' );  /* Replaces the default bullet with the specified image. 
+                                                        The url() function is used to specify the path to a resource. */
+}
+
+/* SHORTHAND -  list-style: square url( '../images/icon.png' ) inside;  */
+/* Note that the image overrides the square value. square will be used if the image is unavailable. */
+
+
+
+ol > li{
+    color: darkblue;
+}
+
+
+ol > li:nth-child(2){       /* This is a Pseudo Class that selects the Second List Item in this case. :nth-last-child() also exists. */
+    color: yellowgreen;
+}
+
+
+
+ol > li:nth-child( odd ){   /* Selects the List Items at Odd Number Positions. */
+    color: darkmagenta;
+}
+
+
+
+ol > li::marker{        /* This is a Pseudo Element that selects the Bullets/Numbering of the list item. */
+    color: lightcoral;
+}
+
+/* Note that the difference between a Pseudo Class and a Pseudo Element lies in the : and :: */
+
+
+
+ul > li:nth-child(3)::marker{   /* See what I did here? */
+    
+    color: darkblue;
+    font-size: 1rem;
+
+    content: 'Bullet';  /* Replaces Bullet/Numbering with this Text. url() can also be used for images. */
+}
+
